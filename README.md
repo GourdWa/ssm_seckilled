@@ -67,3 +67,35 @@ create table success_killed(
 <!--        <property name="annotationClass" value="org.springframework.stereotype.Repository"/>-->
 </bean>
 ```
+---
+### Day02知识点
+完成了Service层的设计，Service层重点需要掌握两个方法   
+* Exposer exportSeckillUrl(long seckillId);
+
+这个方法是暴露秒杀地址，当传入要秒杀的id时，首先在方法内部判断该id在数据库中是否存在，如果不存在则暴露url失败；如果传入的id在数据库中存在，则进一步判断秒杀时间是否在该商品的秒杀时间间隔内，如果是，则将id进行md5编码，并成功返回暴露的url
+* SeckillExecution executeSeckill(long seckillId, long userPhone, String md5)
+            throws SeckillException, RepeatKillException, SeckillCloseException;
+
+这个方法是对指定的商品执行秒杀操作，该方法的调用应该是在上一个方法调用的后面。当上一个方法调用并且成功暴露url后才能调用这个方法。传入秒杀商品的id和用户手机号的同时将md5编码传入，验证md5是否与暴露出来的md5编码一致，如果一致则执行减库存操作。如果减库存操作成功，则向数据库中插入一条秒杀记录并返回秒杀结果  
+除了Service层的设计，在Day02中的业务逻辑也更加复杂，不仅涉及到了事务的处理，还涉及到了自定义异常处理和日志记录等  
+关于日志记录，使用的是SLF4J和Logback的组合，因此除了引入这两个的定位资源外，还需要配置Logback的xml配置文件。在类路径下命名一个logback.xml的文件，内容如下
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!--http://logback.qos.ch/manual/configuration.html-->
+<configuration debug="true">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
+```
+其中，关于Logback更多的使用参照[Logback官方使用手册](http://logback.qos.ch/manual/configuration.html)  
+
+总结：Service层的代码并不算多，但是其业务逻辑相比DAO层更复杂，要想理清这里的业务关系需要搞明白每一步的目的，这里是整个项目的重难点之一

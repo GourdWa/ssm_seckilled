@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0ca915d-cab6-41be-b2bb-0e4af610a3ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/bean/Seckill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/bean/SuccessKilled.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/dao/SeckillDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/dao/SuccessKilledDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/SeckillDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/SuccessKilledDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-dao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learn/dao/SeckillDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learn/dao/SuccessKilledDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/dto/Exposer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/dto/SeckillExecution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/enums/SeckillStateEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/exception/RepeatKillException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/exception/SeckillCloseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/exception/SeckillException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/service/SeckillService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/service/impl/SeckillServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-service.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learn/service/SeckillServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +40,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
         <option value="spring-beans.schema" />
         <option value="JUnit4 Test Class" />
       </list>
@@ -75,6 +74,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.learn.service" />
       <recent name="com.learn.dao" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -93,82 +93,82 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SuccessKilledDaoTest.insertSuccessKilled">
-    <configuration name="SeckillDaoTest.queryAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SeckillServiceTest.exportSeckillLogic">
+    <configuration name="SeckillServiceTest.executeSeckill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_seckill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.dao.*" />
+          <option name="PATTERN" value="com.learn.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.learn.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.dao.SeckillDaoTest" />
-      <option name="METHOD_NAME" value="queryAll" />
+      <option name="PACKAGE_NAME" value="com.learn.service" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.service.SeckillServiceTest" />
+      <option name="METHOD_NAME" value="executeSeckill" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeckillDaoTest.queryById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SeckillServiceTest.exportSeckillLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_seckill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.dao.*" />
+          <option name="PATTERN" value="com.learn.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.learn.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.dao.SeckillDaoTest" />
-      <option name="METHOD_NAME" value="queryById" />
+      <option name="PACKAGE_NAME" value="com.learn.service" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.service.SeckillServiceTest" />
+      <option name="METHOD_NAME" value="exportSeckillLogic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeckillDaoTest.reduceNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SeckillServiceTest.exportSeckillUrl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_seckill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.dao.*" />
+          <option name="PATTERN" value="com.learn.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.learn.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.dao.SeckillDaoTest" />
-      <option name="METHOD_NAME" value="reduceNumber" />
+      <option name="PACKAGE_NAME" value="com.learn.service" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.service.SeckillServiceTest" />
+      <option name="METHOD_NAME" value="exportSeckillUrl" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SuccessKilledDaoTest.insertSuccessKilled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SeckillServiceTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_seckill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.dao.*" />
+          <option name="PATTERN" value="com.learn.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.learn.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.dao.SuccessKilledDaoTest" />
-      <option name="METHOD_NAME" value="insertSuccessKilled" />
+      <option name="PACKAGE_NAME" value="com.learn.service" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.service.SeckillServiceTest" />
+      <option name="METHOD_NAME" value="getById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SuccessKilledDaoTest.queryByIdWithSeckill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SeckillServiceTest.getSeckillList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_seckill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learn.dao.*" />
+          <option name="PATTERN" value="com.learn.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.learn.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.dao.SuccessKilledDaoTest" />
-      <option name="METHOD_NAME" value="queryByIdWithSeckill" />
+      <option name="PACKAGE_NAME" value="com.learn.service" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.service.SeckillServiceTest" />
+      <option name="METHOD_NAME" value="getSeckillList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -251,11 +251,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SuccessKilledDaoTest.insertSuccessKilled" />
-        <item itemvalue="JUnit.SuccessKilledDaoTest.queryByIdWithSeckill" />
-        <item itemvalue="JUnit.SeckillDaoTest.reduceNumber" />
-        <item itemvalue="JUnit.SeckillDaoTest.queryAll" />
-        <item itemvalue="JUnit.SeckillDaoTest.queryById" />
+        <item itemvalue="JUnit.SeckillServiceTest.exportSeckillLogic" />
+        <item itemvalue="JUnit.SeckillServiceTest.executeSeckill" />
+        <item itemvalue="JUnit.SeckillServiceTest.exportSeckillUrl" />
+        <item itemvalue="JUnit.SeckillServiceTest.getSeckillList" />
+        <item itemvalue="JUnit.SeckillServiceTest.getById" />
       </list>
     </recent_temporary>
   </component>
@@ -273,6 +273,9 @@
       <workItem from="1588484397705" duration="7270000" />
       <workItem from="1588492034206" duration="4615000" />
       <workItem from="1588496983024" duration="18000" />
+      <workItem from="1588572201118" duration="249000" />
+      <workItem from="1588573138896" duration="633000" />
+      <workItem from="1588763363004" duration="12544000" />
     </task>
     <servers />
   </component>
