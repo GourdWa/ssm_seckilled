@@ -99,3 +99,51 @@ create table success_killed(
 其中，关于Logback更多的使用参照[Logback官方使用手册](http://logback.qos.ch/manual/configuration.html)  
 
 总结：Service层的代码并不算多，但是其业务逻辑相比DAO层更复杂，要想理清这里的业务关系需要搞明白每一步的目的，这里是整个项目的重难点之一
+
+### Day03知识点
+
+web层的开发
+
+##### 温习SpringMVC的配置流程
+
+1. web.xml中的配置
+
+   * 配置DispatcherServlet
+
+   * 配置ContextLoaderListener，让Tomcat启动就要加载Spring的配置
+
+   * 使用context-param标签，配置Spring容器的路径，以便能整合Spring
+
+   * 配置characterEncodingFilter过滤器，避免页面乱码
+
+2. 配置SpringMVC的xml配置文件
+
+   * 启动包扫描
+
+   * 启动SpringMVC的注解驱动
+
+   * 将SpringMVC不能处理的静态资源，比如.jsp文件等交给Tomcat处理
+
+   ```xml
+   <mvc:default-servlet-handler/>
+   ```
+
+   * 配置视图解析器
+
+##### Controller控制器实现
+
+**功能分析**
+
+1. 展示秒杀列表
+
+2. 获取单个秒杀的详情
+3. 获取秒杀地址
+4. 执行秒杀逻辑
+
+这里利用了一个数据传输类来封装查询回来的数据，在之前搭建的CRUD的项目中也利用到了一个数据传输类，值得留意这种数据传输类的设计技巧
+
+**详细实现思路**
+
+1. 进入详情页的时候查看cookie中是否有用户登录信息，如果没有则弹出模态框要求用户登录，登录成功才展示秒杀详情
+2. 登录成功之后，向控制层请求系统时间，利用Jqury的cutdown模块倒计时秒杀开始时间
+3. 秒杀开始，电话号码从cookie中获取，传入秒杀商品id执行秒杀逻辑
