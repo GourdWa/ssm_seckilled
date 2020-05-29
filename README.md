@@ -68,7 +68,10 @@ create table success_killed(
 </bean>
 ```
 ---
+5. 学习了Mysql的ignore关键字，ignore关键字在Mysql中主要配合插入语句使用，避免重复插入。例如，当插入的新数据与原来的数据主键冲突是可以使用**insert ignore into**来忽略这种插入错误
+
 ### Day02知识点
+
 完成了Service层的设计，Service层重点需要掌握两个方法   
 * Exposer exportSeckillUrl(long seckillId);
 
@@ -147,3 +150,60 @@ web层的开发
 1. 进入详情页的时候查看cookie中是否有用户登录信息，如果没有则弹出模态框要求用户登录，登录成功才展示秒杀详情
 2. 登录成功之后，向控制层请求系统时间，利用Jqury的cutdown模块倒计时秒杀开始时间
 3. 秒杀开始，电话号码从cookie中获取，传入秒杀商品id执行秒杀逻辑
+
+### Day04知识点
+
+1. protostuff配合Redis的序列化工具
+
+导入依赖
+
+```xml
+<!--    序列化依赖    -->
+<!-- https://mvnrepository.com/artifact/io.protostuff/protostuff-core -->
+<dependency>
+    <groupId>io.protostuff</groupId>
+    <artifactId>protostuff-core</artifactId>
+    <version>1.6.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.protostuff/protostuff-runtime -->
+<dependency>
+    <groupId>io.protostuff</groupId>
+    <artifactId>protostuff-runtime</artifactId>
+    <version>1.6.0</version>
+</dependency>
+```
+
+使用Protostuff的序列化与反序列化
+
+**使用Protostuff实现反序列化**
+
+创建RuntimeSchema，其中泛型指定要序列化的类
+
+```java
+private RuntimeSchema<Seckill> schema = RuntimeSchema.createFrom(Seckill.class);
+```
+
+查询到已经存入Redis中的数据并以字节数组的形式获取出来
+
+```java
+String key = "seckill:" + seckillId;
+byte[] bytes = jedis.get(key.getBytes());
+```
+
+根据得到的byte数组反序列化的到对象
+
+```java
+Seckill seckill = schema.newMessage();
+ProtobufIOUtil.mergeFrom(bytes, seckill, schema);
+```
+
+**使用Protostuff实现序列化**
+
+```java
+String key = "seckill:" + seckill.getSeckillId();
+byte[] bytes = ProtobufIOUtil.toByteArray(seckill, schema, LinkedBuffer.allocate());
+int timeout = 60 * 60;//一小时
+String result = jedis.setex(key.getBytes(), timeout, bytes);
+return result;
+```
+

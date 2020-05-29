@@ -8,11 +8,17 @@ import java.util.Date;
  * @description
  */
 public class Seckill {
+    //秒杀商品的id
     private long seckillId;
+    //商品名称
     private String name;
+    //库存
     private int number;
+    //秒杀开始时间
     private Date startTime;
+    //秒杀结束时间
     private Date endTime;
+    //秒杀项创建时间
     private Date createTime;
 
     public long getSeckillId() {

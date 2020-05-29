@@ -15,12 +15,13 @@ public interface SeckillDao {
 
     /**
      * 减库存
+     * 秒杀成功后减库存，秒杀成功的条件是库存大于0，且秒杀的时间在秒杀开始和秒杀结束之间
      *
      * @param seckillId
      * @param killTime
      * @return
      */
-    int reduceNumber(@Param("seckillId") long seckillId,@Param("killTime") Date killTime);
+    int reduceNumber(@Param("seckillId") long seckillId, @Param("killTime") Date killTime);
 
     /**
      * 根据id查询秒杀对象

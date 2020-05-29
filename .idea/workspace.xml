@@ -7,8 +7,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0ca915d-cab6-41be-b2bb-0e4af610a3ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learn/dao/RedisDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/sql/seckill.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learn/dao/RedisDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/bean/Seckill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/bean/Seckill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/bean/SuccessKilled.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/bean/SuccessKilled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/dao/SeckillDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/dao/SeckillDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learn/service/impl/SeckillServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learn/service/impl/SeckillServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SuccessKilledDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SuccessKilledDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learn/service/SeckillServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learn/service/SeckillServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/learn/bean/Seckill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/learn/bean/Seckill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/learn/bean/SuccessKilled.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/learn/bean/SuccessKilled.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/learn/service/impl/SeckillServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SuccessKilledDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SuccessKilledDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-dao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_seckill.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_seckill.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/classes/com/learn/bean/Seckill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/classes/com/learn/bean/Seckill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/classes/com/learn/bean/SuccessKilled.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/classes/com/learn/bean/SuccessKilled.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/classes/com/learn/service/impl/SeckillServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/classes/com/learn/service/impl/SeckillServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/classes/mapper/SuccessKilledDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/classes/mapper/SuccessKilledDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/lib/c3p0-0.9.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_seckill/WEB-INF/lib/mchange-commons-java-0.2.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/learn/service/SeckillServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/learn/service/SeckillServiceTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +60,11 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="JUnit4 Test Class" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -77,8 +102,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.learn.service" />
       <recent name="com.learn.dao" />
+      <recent name="com.learn.service" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -96,7 +121,38 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.ssm_seckill">
+  <component name="RunManager" selected="JUnit.SeckillServiceTest.exportSeckillLogic">
+    <configuration name="RedisDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm_seckill" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learn.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.dao.RedisDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisDaoTest.testSeckill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm_seckill" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learn.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learn.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.learn.dao.RedisDaoTest" />
+      <option name="METHOD_NAME" value="testSeckill" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SeckillServiceTest.executeSeckill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm_seckill" />
       <extension name="coverage">
@@ -140,38 +196,6 @@
       <option name="PACKAGE_NAME" value="com.learn.service" />
       <option name="MAIN_CLASS_NAME" value="com.learn.service.SeckillServiceTest" />
       <option name="METHOD_NAME" value="exportSeckillUrl" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SeckillServiceTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssm_seckill" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learn.service" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.service.SeckillServiceTest" />
-      <option name="METHOD_NAME" value="getById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SeckillServiceTest.getSeckillList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssm_seckill" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learn.service" />
-      <option name="MAIN_CLASS_NAME" value="com.learn.service.SeckillServiceTest" />
-      <option name="METHOD_NAME" value="getSeckillList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -256,17 +280,17 @@
       <item itemvalue="JUnit.SeckillServiceTest.executeSeckill" />
       <item itemvalue="JUnit.SeckillServiceTest.exportSeckillLogic" />
       <item itemvalue="JUnit.SeckillServiceTest.exportSeckillUrl" />
-      <item itemvalue="JUnit.SeckillServiceTest.getById" />
-      <item itemvalue="JUnit.SeckillServiceTest.getSeckillList" />
       <item itemvalue="Tomcat Server.ssm_seckill" />
+      <item itemvalue="JUnit.RedisDaoTest.testSeckill" />
+      <item itemvalue="JUnit.RedisDaoTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SeckillServiceTest.exportSeckillLogic" />
+        <item itemvalue="JUnit.RedisDaoTest.testSeckill" />
+        <item itemvalue="JUnit.RedisDaoTest" />
         <item itemvalue="JUnit.SeckillServiceTest.executeSeckill" />
         <item itemvalue="JUnit.SeckillServiceTest.exportSeckillUrl" />
-        <item itemvalue="JUnit.SeckillServiceTest.getSeckillList" />
-        <item itemvalue="JUnit.SeckillServiceTest.getById" />
       </list>
     </recent_temporary>
   </component>
@@ -294,6 +318,12 @@
       <workItem from="1589275960996" duration="8651000" />
       <workItem from="1589292741829" duration="1637000" />
       <workItem from="1589294777955" duration="36000" />
+      <workItem from="1589372664814" duration="6883000" />
+      <workItem from="1590333465058" duration="2610000" />
+      <workItem from="1590372112650" duration="180000" />
+      <workItem from="1590672017921" duration="4394000" />
+      <workItem from="1590717964885" duration="98000" />
+      <workItem from="1590754617798" duration="6205000" />
     </task>
     <servers />
   </component>
@@ -312,5 +342,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/learn/dao/RedisDaoTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/learn/service/SeckillServiceTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/learn/service/impl/SeckillServiceImpl.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

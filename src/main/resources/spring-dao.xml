@@ -30,6 +30,11 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <property name="basePackage" value="com.learn.dao"/>
-<!--        <property name="annotationClass" value="org.springframework.stereotype.Repository"/>-->
+        <!--        <property name="annotationClass" value="org.springframework.stereotype.Repository"/>-->
+    </bean>
+
+    <bean class="com.learn.dao.RedisDao" id="redisDao">
+        <constructor-arg index="0" value="192.168.81.130"/>
+        <constructor-arg index="1" value="6379"/>
     </bean>
 </beans>

@@ -5,14 +5,18 @@ import java.util.Date;
 /**
  * @author ZixiangHu
  * @create 2020-05-03  13:59
- * @description
+ * @description 秒杀成功的订单
  */
 public class SuccessKilled {
+    //秒杀的商品id
     private long seckillId;
+    //参与秒杀的用户手机号
     private long userPhone;
+    //秒杀状态
     private short state;
+    //订单创建时间
     private Date createTime;
-    //多对一
+    //每个订单编号都对应了一个商品
     private Seckill seckill;
 
     public long getSeckillId() {
